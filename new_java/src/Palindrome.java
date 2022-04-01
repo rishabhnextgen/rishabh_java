@@ -1,12 +1,31 @@
 
+import java.util.*;
 public class Palindrome {
 
 	public static void main(String[] args) {
-		int number = 1234;
-		String str = String.valueOf(number);
-		StringBuilder builder = new StringBuilder(str);
-		builder.reverse();
-		number = Integer.parseInt(builder.toString());
-		System.out.println(number);
+		
+		Scanner scn= new Scanner(System.in);
+		System.out.println("Enter the number");
+		int n= scn.nextInt();
+		
+		int temp;
+		temp=n;
+		int sum=0;
+		int rev;
+		while(n>0)
+		{
+			rev=n%10;
+			sum=sum*10+rev;
+			n=n/10;
+			}
+		
+		if(temp==sum)
+		{
+			System.out.println("It is palindrome number ");
+		}
+		else {
+			System.out.println("not a palindrome ");
+		}
+	
 	}
 }

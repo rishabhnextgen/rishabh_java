@@ -1,11 +1,18 @@
 
+import java.util.*;
 public class Rev {
 
 	public static void main(String[] args) {
-		String a = "ANUPAM";
+		
+		  Scanner scn= new Scanner(System.in); 
+		  System.out.println("Enter the string");
+		  
+		  String a= scn.nextLine();
+		 
+		
 		int b= a.length();
-		String rev="";
-		for(int i=b-1;i>0;i--)
+		String rev=" ";
+		for(int i=b-1;i>=0;i--)
 			{
 			rev=rev+a.charAt(i);
 			
